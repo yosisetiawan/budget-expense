@@ -11,6 +11,11 @@ const routes = [
     component: Home,
   },
   {
+    path: '/budget',
+    name: 'Atur Budget',
+    component: () => import(/* webpackChunkName: "budget-setting"*/ '../views/addIncomeAndExpense')
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting

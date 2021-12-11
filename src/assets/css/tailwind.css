@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*.wrapper{*/
+/*    @apply grid grid-rows-expense-wrapper;*/
+/*}*/
+
+.custom-wrapper{
+    grid-template-rows: 375px auto;
+}
+
+.bullet-status{
+    height: 16px;
+}
+
+.selected-expense--type{
+    text-decoration: underline;
+    text-underline-position: under;
+    text-underline-offset: 8px;
+    text-decoration-color: #DC7E38;
+    text-decoration-thickness: 3px;
+}

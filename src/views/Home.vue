@@ -9,11 +9,10 @@
       <div class="text-xl font-sans font-semibold font-nunito text-white text-left mb-1">
         Sisa Uangku
       </div>
-      <div class="text-xl font-sans font-semibold font-nunito font-sans text-left text-white" v-if="isTransactionHaveData">
+      <div class="text-xl font-sans font-semibold font-nunito font-sans text-left text-white">
         {{ $rupiah(currentSpentTransaction['current_balance']) }}
       </div>
       <panel-balance
-        v-if="isTransactionHaveData"
       :expense="currentSpentTransaction['expense']"
       :income="currentSpentTransaction['income']"
       ></panel-balance>

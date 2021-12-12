@@ -22,6 +22,9 @@
       :transactions="transactionList"
       ></budget-list>
     </template>
+    <template slot="content">
+      <add-event></add-event>
+    </template>
   </main-wrapper>
 </template>
 
@@ -36,7 +39,8 @@ export default {
   components: {
     'main-wrapper': () => import(/* webpackChunkName: "main-wrapper" */ "@/components/wrapper/wrapper.vue"),
     'panel-balance': () => import(/* webpackChunkaName: "panel-balance" */ '@/components/PanelBalance.vue'),
-    'budget-list': () => import(/* webpackChunkName: "budget-list"*/ '@/components/budgetList.vue')
+    'budget-list': () => import(/* webpackChunkName: "budget-list"*/ '@/components/budgetList.vue'),
+    'add-event': () => import(/* webpackChunkName: "budget-list"*/ '@/components/addEvent.vue')
   },
   data(){
     return{

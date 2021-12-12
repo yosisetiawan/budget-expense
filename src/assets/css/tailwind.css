@@ -21,3 +21,10 @@
     text-decoration-color: #DC7E38;
     text-decoration-thickness: 3px;
 }
+
+.btn-add{
+    height: 3.5rem;
+    width: 3.5rem;
+    right: 20px;
+    bottom: 30px;
+}

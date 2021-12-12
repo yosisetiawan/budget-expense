@@ -2,7 +2,7 @@
   <main-wrapper>
     <template slot="header">
       <div class="flex justify-between flex-col h-full">
-        <div class="text-sm font-bold font-nunito text-white text-left">
+        <div @click="toHome" class="text-sm font-bold font-nunito text-white text-left">
           Kembali
         </div>
         <selection-type-panel v-model="selectedType"></selection-type-panel>
@@ -90,6 +90,9 @@ export default {
       const collection = _db.transaction(['transaction-list'], 'readwrite').objectStore('transaction-list')
 
       collection.add(data)
+    },
+    toHome(){
+      this.$router.replace('/')
     }
   }
 };

@@ -4,6 +4,40 @@
   </div>
 </template>
 
+<script>
+import uuid from "./helper/uuid";
+
+export default{
+  computed:{
+    isHaveClientId(){
+      const userId = localStorage.getItem('clientId')
+
+      return userId !== null
+    }
+  },
+  watch:{
+    isHaveClientId:{
+      immediate:true,
+      handler(val){
+        if(!val){
+          this.initClientId()
+          return
+        }
+      }
+    }
+  },
+  methods:{
+    initClientId(){
+      const uuidNumber = uuid()
+      const userId = `client-${uuidNumber}`
+
+      localStorage.setItem('clientId', userId)
+      window.location.reload()
+    }
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -5,15 +5,15 @@
         Pemasukan
       </div>
       <div class="text-right font-bold font-nunito font-sans text-lg">
-        Rp 20.000
+        {{ $rupiah(income) }}
       </div>
     </div>
     <div class="h-full rounded-r-md w-full bg-white text-black p-2">
       <div class="text-left font-bold nunito-font font-sans text-xs text-black">
-        Pemasukan
+        Pengeluaran
       </div>
       <div class="text-right font-bold font-nunito font-sans text-lg">
-        Rp 20.000
+        {{ $rupiah(expense) }}
       </div>
     </div>
   </div>
@@ -21,7 +21,17 @@
 
 <script>
 export default {
-  name: "PanelBalance"
+  name: "PanelBalance",
+  props:{
+    income:{
+      type:Number,
+      default: 0
+    },
+    expense:{
+      type:Number,
+      default: 0
+    }
+  }
 };
 </script>
 

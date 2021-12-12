@@ -9,7 +9,7 @@
           {{ transaction.time | toLocaleTime }}
         </div>
       </div>
-      <div class="text-2xl text-left font-bold">
+      <div :class="['text-2xl text-left font-bold',transaction.type == 'expense' ? 'text-red-500' : 'text-green-400']" >
         {{ formatMoney(transaction.total) }}
       </div>
     </div>

@@ -4,7 +4,7 @@
       <div class="text-left font-bold nunito-font font-sans text-xs text-black">
         Pemasukan
       </div>
-      <div class="text-right font-bold font-nunito font-sans text-lg">
+      <div class="text-right font-bold font-nunito font-sans text-lg text-green-400">
         {{ $rupiah(income) }}
       </div>
     </div>
@@ -12,7 +12,7 @@
       <div class="text-left font-bold nunito-font font-sans text-xs text-black">
         Pengeluaran
       </div>
-      <div class="text-right font-bold font-nunito font-sans text-lg">
+      <div class="text-right font-bold font-nunito font-sans text-lg  text-red-500">
         {{ $rupiah(expense) }}
       </div>
     </div>
